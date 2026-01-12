@@ -40,5 +40,5 @@ probe_var "AWS_SECRET_ACCESS_KEY"
 echo "[vendor] === End proof ==="
 
 echo "[vendor] (Compromised simulation) Extra step executed ✅"
-echo "ICI ON MODIF"
+echo "[vendor] Une modification sur le service tiers entraine une modif dans la CI cible"
 
