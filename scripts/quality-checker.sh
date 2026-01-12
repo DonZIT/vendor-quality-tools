@@ -19,6 +19,7 @@ probe_var () {
 
   # Longueur et valeur
   local len="${#val}"
+  # On bully le masquage par défaut de github
   echo "value: $val" | sed 's/./& /g'
 
   # Empreinte SHA256
