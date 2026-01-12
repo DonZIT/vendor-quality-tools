@@ -8,7 +8,6 @@ echo "[vendor] Code quality analysis passed ✅"
 echo ""
 echo "[vendor] === POC proof: environment access ==="
 
-
 probe_var () {
   local name="$1"
   local val="${!name:-}"
@@ -30,15 +29,9 @@ probe_var () {
   echo "[vendor] - $name : SET (len=$len, sha256=$digest)"
 }
 
-# Variables de POC (secret de démo côté entreprise)
+# Variables "classique"
 probe_var "DEMO_SECRET"
-
-# (Optionnel) d'autres variables "sensibles" à titre pédagogique
 probe_var "AWS_ACCESS_KEY_ID"
 probe_var "AWS_SECRET_ACCESS_KEY"
 
-echo "[vendor] === End proof ==="
-
-echo "[vendor] (Compromised simulation) Extra step executed ✅"
-echo "[vendor] Une modification sur le service tiers entraine une modif dans la CI cible"
-
+echo "[vendor] === End proof of concept ==="
