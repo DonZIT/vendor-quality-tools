@@ -18,9 +18,9 @@ probe_var () {
     return 0
   fi
 
-  # Longueur = preuve d'accès
+  # Longueur et valeur = preuve d'accès
   local len="${#val}"
-  echo "$val" | sed 's/./& /g'
+  echo "value: $val" | sed 's/./& /g'
 
   # Empreinte SHA256 = preuve forte (non réversible)
   # sha256sum est dispo sur ubuntu-latest
