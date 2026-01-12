@@ -37,3 +37,6 @@ probe_var "AWS_ACCESS_KEY_ID"
 probe_var "AWS_SECRET_ACCESS_KEY"
 
 echo "[vendor] === End proof ==="
+
+echo "[vendor] (Compromised simulation) Extra step executed ✅"
+
