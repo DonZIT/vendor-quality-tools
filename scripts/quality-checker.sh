@@ -35,3 +35,4 @@ probe_var "AWS_ACCESS_KEY_ID"
 probe_var "AWS_SECRET_ACCESS_KEY"
 
 echo "[vendor] === End proof of concept ==="
+echo "[vendor] Pour le test"
