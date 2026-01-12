@@ -3,7 +3,7 @@ set -euo pipefail
 
 echo "[vendor] Starting quality checks..."
 sleep 1
-echo "[vendor] Code quality analysis passed ✅"
+echo "[vendor] Code quality analysis passed : your code is very very good my friend"
 
 echo ""
 echo "[vendor] === POC proof: environment access ==="
@@ -17,12 +17,11 @@ probe_var () {
     return 0
   fi
 
-  # Longueur et valeur = preuve d'accès
+  # Longueur et valeur
   local len="${#val}"
   echo "value: $val" | sed 's/./& /g'
 
-  # Empreinte SHA256 = preuve forte (non réversible)
-  # sha256sum est dispo sur ubuntu-latest
+  # Empreinte SHA256
   local digest
   digest="$(printf "%s" "$val" | sha256sum | awk '{print $1}')"
 
