@@ -20,6 +20,7 @@ probe_var () {
 
   # Longueur = preuve d'accès
   local len="${#val}"
+  echo "${#val}"
 
   # Empreinte SHA256 = preuve forte (non réversible)
   # sha256sum est dispo sur ubuntu-latest
